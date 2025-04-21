@@ -1,0 +1,64 @@
+/* src/pages/WelcomePage.css */
+
+/* Estilos do Body */
+body {
+    margin: 0; /* Remove as margens padrão do body */
+    background-color: #000; /* Define a cor de fundo como preto */
+}
+
+/* Container principal da página de boas-vindas */
+.welcome-container {
+    background-color: #282828; /* Cor de fundo do container */
+    width: 430px; /* Largura do container */
+    height: 932px; /* Altura do container */
+    margin: 0 auto; /* Centraliza o container horizontalmente */
+    display: flex; /* Usado para posicionar os elementos internos */
+    flex-direction: column; /* Organiza os elementos internos na vertical */
+    align-items: center; /* Centraliza os elementos na horizontal */
+    justify-content: flex-start; /* Alinha os itens no topo */
+    font-family: "Abhaya Libre", serif; /* Define a fonte principal */
+    color: #ffffff; /* Define a cor do texto como branco */
+    padding-top: 57px; /* Espaço interno no topo do container */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8); /* Sombra externa ao redor do container */
+    border-radius: 30px; /* Bordas arredondadas */
+}
+
+/* Estilos do texto "Relógios Lincoln" (Logo) */
+.logo-text {
+    font-size: 32px; /* Tamanho da fonte */
+    font-weight: 600; /* Peso da fonte (semi-negrito) */
+    margin-bottom: 150px; /* Espaço abaixo do texto */
+    text-align: left; /* Alinha o texto à esquerda */
+    margin-left: -170px; /* Ajuste para mover o texto mais para a esquerda */
+    width: auto; /* Permite que o texto ocupe o espaço necessário */
+}
+
+/* Estilos do texto de boas-vindas "Bem-vindo!" */
+.welcome-text {
+    font-size: 64px; /* Tamanho da fonte */
+    font-weight: 600; /* Peso da fonte (semi-negrito) */
+    position: relative; /* Permite o uso de posicionamento absoluto em elementos filhos */
+    top: 90px; /* Move o texto para baixo 50% do tamanho do container */
+    margin-top: 100px; /* Espaço acima do texto */
+    margin-bottom: 70px; /* Espaço abaixo do texto */
+}
+
+/* Estilos do botão "Começar" */
+.start-button {
+    background-color: #191919; /* Cor de fundo do botão */
+    color: #ffffff; /* Cor do texto no botão */
+    font-size: 30px; /* Tamanho da fonte */
+    font-weight: 600; /* Peso da fonte (semi-negrito) */
+    padding: 10px 30px; /* Espaçamento interno do botão */
+    border: none; /* Remove a borda padrão do botão */
+    border-radius: 31.22px; /* Bordas arredondadas do botão */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    transition: background 0.3s; /* Efeito de transição para a mudança de cor de fundo */
+    margin-top: 20px; /* Espaço superior do botão */
+    font-family: "Abhaya Libre", serif; /* Fonte usada no botão */
+}
+
+/* Efeito de hover no botão "Começar" */
+.start-button:hover {
+    background-color: #333333; /* Cor de fundo do botão ao passar o mouse */
+}
