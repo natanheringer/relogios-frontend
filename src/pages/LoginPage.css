@@ -6,25 +6,42 @@ body {
   }
   
   .login-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #282828;
+     background-color: #282828; /* Cor de fundo do container */
+    width: 430px; /* Largura do container */
+    height: 932px; /* Altura do container */
+    margin: 0 auto; /* Centraliza o container horizontalmente */
+    display: flex; /* Usado para posicionar os elementos internos */
+    flex-direction: column; /* Organiza os elementos internos na vertical */
+    align-items: center; /* Centraliza os elementos na horizontal */
+    justify-content: flex-start; /* Alinha os itens no topo */
+    font-family: "Abhaya Libre", serif; /* Define a fonte principal */
+    color: #ffffff; /* Define a cor do texto como branco */
+    padding-top: 57px; /* Espaço interno no topo do container */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8); /* Sombra externa ao redor do container */
+    border-radius: 30px; /* Bordas arredondadas */
   }
   
   .login-box {
-    background-color: #282828;
-    width: 430px;
-    padding: 30px;
-    border-radius: 30px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    /* Container para o formulário de login */
+    position: relative;
+    width: 300px; /* Largura do container */
+    height: 600px;
+    top: 80px; /* Move o texto para baixo 50% do tamanho do container */
+    left: 0px;
+    background-color: #060606; /* Cor de fundo do container */
+    padding: 20px; /* Espaçamento interno do container */
+    border-radius: 30px; /* Bordas arredondadas do container */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8); /* Sombra externa ao redor do container */
+    display: flex; /* Usado para posicionar os elementos internos */
+    flex-direction: column; /* Organiza os elementos internos na vertical */
+    align-items: center; /* Centraliza os elementos na horizontal */
+    justify-content: center; /* Alinha os itens no centro */
   }
   
+  /* configurações texto Login */
   .login-title {
+    position: relative;
+    top: -130px;
     font-size: 64px;
     font-weight: 600;
     color: #ffffff;
@@ -32,29 +49,45 @@ body {
     font-family: "Abhaya Libre", serif;
   }
   
+  /* espaçamento entre user e senha */
   .input-group {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
   
+  /* Estilos do campo de entrada de texto */
   input {
-    width: 100%;
-    padding: 15px;
+    position: relative;
+    top: -150px;
+    left: -50px;
+    width: 150%;
+    padding: 10px 0;
     margin-top: 10px;
-    background-color: #191919;
-    color: #ffffff;
+    background-color: transparent;
     border: none;
-    border-radius: 20px;
+    border-bottom: 2px solid #ffffff;
+    border-radius: 0;
+    color: #ffffff;
     font-size: 18px;
     font-family: "Abhaya Libre", serif;
   }
-  
-  input::placeholder {
-    color: #888888;
+
+  /* Estilos do campo de entrada de texto ao clicar */
+  input:focus {
+    outline: none;
+    border-bottom: 2px solid #888888; /* Cor da borda ao focar */
   }
   
+  /* Estilos do texto de user e senha */
+  input::placeholder {
+    color: #888888; /* Cor do texto de placeholder */
+  }
+  
+  /* Estilos do botão "Entrar" */
   .login-button {
-    background-color: #191919;
-    color: #ffffff;
+    position: relative;
+    top: -100px;
+    background-color: #ffffff;
+    color: #000000;
     font-size: 30px;
     font-weight: 600;
     padding: 15px 30px;
@@ -66,5 +99,81 @@ body {
   }
   
   .login-button:hover {
-    background-color: #333333;
+    background-color: #585858;
   }
+
+
+  .checkbox-group {
+  position: relative;
+  top: -60px; /* Isso puxa o grupo para cima, ajuste como quiser */
+  left: -30px; /* Mantém alinhado com os campos de input */
+  display: flex; 
+  align-items: center;
+  gap: 8px;
+  color: #ffffff;
+  width: 100%;
+  white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+}
+
+.checkbox-text {
+  position: relative;
+  top: -145px; /* Pequeno ajuste para alinhar com a caixa */
+  left: -75px; /* Alinha com os campos de input */
+  font-size: 16px;
+  align-items: baseline;
+  
+}
+
+/* configuração do texto esqueceu a senha */
+.forgot-password {
+  position: relative;
+  top: -192px;
+  left: -50px;
+  width: 100%;
+  text-align: right;
+  margin-top: 5px;
+}
+
+.forgot-password a {
+  color: #ffffff;
+  position: relative;
+  top: -40px;
+  left: 100px;
+  font-size: 16px;
+  text-decoration: none;
+  font-family: "Abhaya Libre", serif;
+}
+
+.forgot-password a:hover {
+  text-decoration: underline;
+  color: #888888;
+}
+
+/* Ajustes no contêiner .register-link */
+.register-link {
+  position: absolute;
+  top: 400px;
+  left: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Abhaya Libre", serif;
+  color: #ffffff;
+  gap: 5px; /* Espaçamento entre o texto e o link */
+}
+
+/* Ajuste do tamanho da fonte sem afetar outros elementos */
+.register-link span {
+  font-size: 18px; /* Tamanho da fonte para "Não tem uma conta?" */
+}
+
+.register-link a {
+  color: #888888;
+  text-decoration: none;
+  font-size: 18px; /* Tamanho da fonte apenas para o "Registre-se" */
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+  color: #888888;
+}

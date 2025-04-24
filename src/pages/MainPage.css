@@ -1,0 +1,187 @@
+/* Reset global */
+body {
+  margin: 0;
+  background-color: #000;
+}
+
+/* Container principal respeitando formato do iPhone 16 Pro Max */
+.main-container {
+  position: relative;
+  width: 430px;
+  height: 932px;
+  margin: 0 auto;
+  background-color: #282828;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: "Abhaya Libre", serif;
+  color: #ffffff;
+  padding-top: 57px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+/* Barra Superior */
+.top-bar {
+  position: absolute;
+  top: 0;
+  width: 430px;
+  height: 60px;
+  background-color: #282828;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+/* Botões do menu e usuário */
+.menu-button, .user-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Sidebar - Escondida por padrão */
+.side-menu {
+  position: absolute;
+  top: 60px;
+  left: -250px; /* Posição inicial fora da tela */
+  width: 250px;
+  height: 872px;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  box-shadow: 3px 0 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease-in-out;
+  z-index: 999;
+}
+
+/* Sidebar direita */
+.side-menu, .profile-menu {
+  position: absolute;
+  top: 60px;
+  width: 250px;
+  height: 872px;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  box-shadow: 3px 0 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  z-index: 999;
+  opacity: 0; /* Começa invisível */
+  visibility: hidden; /* Não ocupa espaço no layout */
+}
+
+/* Sidebar esquerda */
+.side-menu {
+  left: -250px; /* Fora da tela */
+}
+
+/* Sidebar direita */
+.profile-menu {
+  right: -250px; /* Fora da tela */
+}
+
+/* Exibe o menu quando ativado */
+.side-menu.open {
+  opacity: 1; /* Agora visível */
+  visibility: visible;
+  transform: translateX(250px); /* Move para dentro */
+}
+
+.profile-menu.open {
+  opacity: 1; /* Agora visível */
+  visibility: visible;
+  transform: translateX(-250px); /* Move para dentro */
+}
+
+.side-menu h2, .profile-menu h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.side-menu ul, .profile-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.side-menu li, .profile-menu li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.side-menu li:hover, .profile-menu li:hover {
+  background-color: #444;
+}
+
+/* Estilos do botão de sair */
+.logout-button {
+  background-color: red;
+  color: white;
+  font-size: 16px;
+  padding: 10px;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background-color: darkred;
+}
+
+/* Caixa de conteúdo */
+.main-box {
+  width: 380px;
+  height: 750px;
+  background-color: #060606;
+  padding: 20px;
+  border-radius: 30px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+/* Título */
+.main-title {
+  font-size: 64px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 50px;
+  font-family: "Abhaya Libre", serif;
+}
+
+/* Texto */
+.main-text {
+  font-size: 18px;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Botão */
+.main-button {
+  background-color: #191919;
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 600;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 31px;
+  cursor: pointer;
+  font-family: "Abhaya Libre", serif;
+  width: 100%;
+  text-align: center;
+}
+
+.main-button:hover {
+  background-color: #333333;
+}

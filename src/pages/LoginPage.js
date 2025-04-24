@@ -1,14 +1,18 @@
 import React, { useState } from 'react';
 import './LoginPage.css';
 
-const LoginPage = () => {
+const LoginPage = ({ onLoginSuccess }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Lógica de login (não implementada por enquanto)
     console.log('Login:', username, password);
+    
+    // Aqui poderia ter uma verificação real
+    if (username && password) {
+      onLoginSuccess(); // Chama a função que mostra a MainPage
+    }
   };
 
   return (
@@ -19,7 +23,7 @@ const LoginPage = () => {
           <div className="input-group">
             <input
               type="text"
-              placeholder="Usuário"
+              placeholder="Usuário ou E-mail"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
             />
@@ -35,6 +39,17 @@ const LoginPage = () => {
           <button type="submit" className="login-button">
             Entrar
           </button>
+          <div className="checkbox-group">
+            <input type="checkbox" id="remember" />
+            <span className="checkbox-text">Lembre-se de mim</span>
+          </div>
+          <div className="forgot-password">
+            <a href="/esqueci-senha">Esqueceu a senha?</a>
+          </div>
+          <div className="register-link">
+            <span>Não tem uma conta?</span>
+            <a href="/register">Registre-se</a>
+          </div>
         </form>
       </div>
     </div>

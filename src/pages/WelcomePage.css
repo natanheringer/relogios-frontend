@@ -25,6 +25,7 @@ body {
 
 /* Estilos do texto "Relógios Lincoln" (Logo) */
 .logo-text {
+    color: #ffffff;
     font-size: 32px; /* Tamanho da fonte */
     font-weight: 600; /* Peso da fonte (semi-negrito) */
     margin-bottom: 150px; /* Espaço abaixo do texto */
